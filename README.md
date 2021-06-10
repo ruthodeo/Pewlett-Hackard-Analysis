@@ -1,13 +1,15 @@
 #Pewlett-Hackard Analysis
 
-##Overview of the analysis: Explain the purpose of this analysis.
+##Overview of the analysis: 
 
 Pewlett-Hackard is a big company that have many employees, some employees are starting to retire and the management  wants to be preparate for the future.
 For that reason he ask to help him to analyse and determine the number of retiring employees selecting by birth of date, by title, by name, by date to date and who employeers are elegible to participate in the mentorship program that hey offer.
 
-##Results:
+###Results:
 
-1. number of employees that are on the list for retirement are in total 90, 398 
+1. It is surprising that the more amount of retirement of employees are on the more high areas such as Senior Engineer, Senior Staff, Engineer and staff, followed by techniqye Leader and Assitant Engineer.
+2. The number of employees that are on the list for retirement are in total 90, 398 
+3. The titles that aplied to works as mentoring are : Staff, Technique leader, Senior Staff , Senior engineer and Engineer.
 
        SELECT emp.emp_no, emp.first_name, emp.last_name,
              ti.title, ti.from_date, ti.to_date
@@ -22,10 +24,8 @@ For that reason he ask to help him to analyse and determine the number of retiri
        
 <img width="780" alt="retirement_titles" src="https://user-images.githubusercontent.com/82455263/121600573-491c3080-ca0a-11eb-870e-998ae953123c.png">
 
-2. is surprising that the more amount of retirement of employees are on the more high areas such as Senior Engineer, Senior Staff, Engineer and staff, followed by techniqye Leader and Assitant Engineer.
-      
- 
-       SELECT DISTINCT ON (emp_no) emp_no,
+     
+        SELECT DISTINCT ON (emp_no) emp_no,
        first_name,
        last_name,
        title
@@ -48,8 +48,7 @@ For that reason he ask to help him to analyse and determine the number of retiri
 
 <img width="250" alt="retiring_titles" src="https://user-images.githubusercontent.com/82455263/121600606-52a59880-ca0a-11eb-9f42-28ef6a58ccf1.png">
 
-3. The titles that aply to works as mentoring are : Staff, Technique leader, Senior Staff , Senior engineer and Engineer.
-4. 
+
       SELECT DISTINCT ON (emp.emp_no) emp.emp_no, emp.first_name, emp.last_name,
                               emp.birth_date ,ti.title, ti.from_date, ti.to_date
       INTO mentorship_eligibilty
@@ -71,11 +70,12 @@ For that reason he ask to help him to analyse and determine the number of retiri
 
 ###How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
-It will need to be feeled 90,398 spaces.
+    It will need to be feeled 90,398 spaces.
+
 <img width="250" alt="retiring_titles" src="https://user-images.githubusercontent.com/82455263/121601230-4a019200-ca0b-11eb-887b-157534255a42.png">
 
 ###Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
-It will be necessary to do another kind of analysis because having the knowlege of something it means the retirement employee is going to be ready to mentor the next generation of Pewlett Hackard emploees.
+    It will be necessary to do another kind of analysis because having the knowlege of something it means the retirement employee is going to be ready to mentor the next generation of Pewlett Hackard emploees.
 
-However i believe with the years of experience and an aditional capatitation course, that employee that is retiring will be more than ready to mentor the next generation of employees.
+    However i believe with the years of experience and an aditional capatitation course, that employee that is retiring will be more than ready to mentor the next generation of employees.
